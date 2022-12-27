@@ -345,9 +345,9 @@ class HtcWeather extends LitElement {
                 var forecast = `<li>`;
                 forecast    += `<p class="dayname">${regional[config.lang]['dayNames'][d_date.getDay()]}&nbsp;${d_date.getDate()}</p>
                                 <img src="${forecastIcon}" alt="${stateObj.attributes.forecast[i].condition}" title="${stateObj.attributes.forecast[i].condition}" />
-                                <div class="daytemp">${Math.round(stateObj.attributes.forecast[i].temperature * 100) / 100}${this.getUnit("temperature")}`
+                                <div class="daytemp">${Math.round(stateObj.attributes.forecast[i].temperature)}${this.getUnit("temperature")}`
                 if(stateObj.attributes.forecast[i].templow){
-                    forecast += `&nbsp;/&nbsp;${Math.round(stateObj.attributes.forecast[i].templow * 100) / 100}${this.getUnit("temperature")}`;
+                    forecast += `&nbsp;/&nbsp;${Math.round(stateObj.attributes.forecast[i].templow)}${this.getUnit("temperature")}`;
                 }
                 forecast += `</div></li>`;
                 $(elem).find('#forecast').append(forecast);
