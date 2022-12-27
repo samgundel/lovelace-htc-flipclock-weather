@@ -206,7 +206,7 @@ class HtcWeather extends LitElement {
         const card = document.createElement('ha-card');
         card.header = this._config.title;
         root.appendChild(card);
-        var container_size = '470px'
+        var container_size = '420px'
         if(!this._config.renderForecast){
             var container_size = '320px'
         }
